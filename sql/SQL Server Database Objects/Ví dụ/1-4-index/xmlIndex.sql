@@ -1,0 +1,6 @@
+use QLDiem
+GO
+CREATE PRIMARY XML INDEX XML_index1 ON  testXML  (Address)
+GO
+CREATE XML INDEX XML_index2 on testXML (Address) USING XML INDEX XML_index1 FOR PATH
+GO
