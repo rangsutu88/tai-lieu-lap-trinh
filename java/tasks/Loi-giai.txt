@@ -1,0 +1,1713 @@
+Bài 1 :
+
+
+package bai01;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static int nhap()
+    {
+        Scanner input = new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static int UCLN(int a, int b){
+        while(a!= b){
+            if(a>b) a= a-b;
+            else b= b-a;
+        }
+        return (a);
+    }
+    public static void main(String[] args) {
+        System.out.println("Nhap a");
+        int a = nhap();
+        System.out.println("Nhap b");
+        int b= nhap();
+        System.out.println("Uoc chung lon nhat cua "+a+" va "+b+" la: "+UCLN(a,b));
+        System.out.println("Boi chung nho nhat cua "+a+" va "+b+" la: "+((a*b)/UCLN(a,b)));
+    }
+
+}
+
+Bài 02 :
+
+
+package bai02;
+import java.util.Scanner;
+public class Main {
+
+    public static void doiCoSo(int n,int base){
+        if(n>=base) doiCoSo(n / base, base);
+        if(n % base>9) System.out.printf("%c",n%base+55);
+        else
+        System.out.print((n % base));
+    }
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+                System.out.println("Nhap n");
+        int n= nhap();
+        System.out.println("Nhap vao co so can chuyen sang b");
+        int b= nhap();
+        System.out.println("So " +n+ " chuyen sang co so " +b+ " thanh: ");
+        doiCoSo(n,b);
+    }
+
+}
+
+Bài 03 :
+
+
+package bai03;
+
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static int tinhTong(long i){
+        int sum=0;
+        long n;
+        while(i!=0){
+            n= i%10;
+            sum+= n;
+            i/=10;
+        }
+        return (sum);
+    }
+    public static void main(String[] args){
+                System.out.print("Nhap n");
+        int n= nhap();
+        System.out.println("Tong cua so "+n+" = " +tinhTong(n));
+    }
+
+}
+
+Bài 04 :
+
+package bai04;
+import java.util.Scanner;
+public class Main {
+
+    
+    public static void phanTich(int n){
+        int i=2;
+        while(n>1){
+            if(cachamchung.checkSNT(i)){
+                if(n%i==0){
+                    System.out.print(i+".");
+                    n/=i;
+                }
+                else i++;
+            }
+            else i++;
+        }
+    }
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        System.out.print("n= " );
+        phanTich(n);
+    }
+
+}
+
+
+Bài 05 :
+
+
+
+package bai05;
+import java.util.Scanner;
+public class Main {
+
+    public static void lietKe(int n){
+        System.out.print(" 2");
+        for(int i=3;i<n;i+=2){
+            if(cachamchung.checkSNT(i))System.out.print(" "+i);
+        }
+    }
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+                System.out.print("Nhap n");
+        int n= nhap();
+        System.out.println("Cac so nguyen to nho hon "+n+ " ");
+        lietKe(n);
+    }
+
+}
+
+
+Bài 06 :
+
+
+package bai06;
+import java.util.Scanner;
+public class Main {
+
+    public static void lietKe(int n){
+        int i=2,count=0;
+        while(count<n){
+            if(cachamchung.checkSNT(i)){
+                System.out.print(" "+i);
+                count++;
+            }
+            i++;
+        }
+    }
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        System.out.println(n+" so nguyen to dau tien la: ");
+        lietKe(n);
+    }
+
+}
+
+
+Bài 07 :
+
+
+
+package bai07;
+import java.util.Scanner;
+public class Main {
+
+    
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        int[] f= new int[n+1];
+        f[0]= 1; f[1]= 1;
+        for(int i=2;i<=n;i++){
+            f[i]= f[i-1]+f[i-2];
+        }
+        System.out.println("So Fibonanci thu "+n+" la: f["+n+"]= "+f[n]);
+    }
+
+}
+
+
+Bài 08 :
+
+
+package bai08;
+
+public class Main {
+
+    
+    public static boolean testSoThuanNghich(int n){
+        StringBuilder xau= new StringBuilder();
+        String str= ""+n;
+        xau.append(str);
+        String check= ""+xau.reverse();
+        if(str.equals(check)) return true;
+        else return false;
+    }
+    public static void main(String[] args) {
+        int n,count=0;
+        for(n=100000 ; n<= 999999 ; n++){
+            if(testSoThuanNghich(n)){
+                System.out.println(n);count++;
+            }
+        }
+        System.out.println("Co "+count+" so thuan nghich co 6 chu so");
+    }
+
+}
+
+
+
+
+Bài 09 :
+
+
+package bai09;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+       System.out.println("Nhap n");
+        int n= nhap();
+        int[] array= new int[n];
+        int tich;
+        do{
+            tich= 1;
+            //In ra mang va tinh tich cac phan tu trong mang
+            System.out.println("");
+            for(int j=0 ; j<n ; j++){
+                System.out.print(" " +array[j]);
+                tich*= array[j];
+            }
+            int i=n-1;
+            do{
+                if(array[i]==0){
+                    array[i]=1;
+                    for(int j=n-1 ; j>i ;j--){
+                        array[j]= 0;
+                    }
+                    break;
+                }
+                else i--;
+            }while(i>=0);
+        }while(tich!=1);
+    }
+
+}
+
+
+
+Bài 10 :
+
+
+
+package bai10;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void result(int a[],int k){
+        int i;
+        System.out.println();
+        for(i=1 ; i<=k ; i++){
+            System.out.print("  "+a[i]);
+        }
+    }
+    public static void try_backTrack(int a[], int n, int k, int i){
+        int j;
+        for(j=a[i-1]+1 ; j<=(n-k+i) ; j++){
+            a[i]= j;
+            if(i== k) result(a,k);
+            else try_backTrack(a, n, k, i+1);
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("Nhap n");
+        int n= nhap();
+        int[] array= new int[n+1];
+        int k;
+        System.out.println("Liet ke tat ca cac tap con k phan tu cua 1,2,..,"+n+" : ");
+        for(k=1 ; k<=n ; k++){
+            System.out.println("\n Tap con "+k+" phan tu: ");
+            try_backTrack(array,n,k,1);
+        }
+    }
+
+}
+
+
+Bài 11 :
+
+package bai11;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        int[] array= new int[n+2];
+        int i,j,k=n-1,temp,check=1;
+        for(i=0 ; i<n ; i++){
+            array[i]= i+1;
+        }
+        System.out.println("Cac hoan vi ke la: ");
+        try{
+            i= n-2;
+            while(check>0){
+                //In ra hoan vi
+                System.out.println("   ");
+                for(j=0 ; j<n ; j++){
+                    System.out.print(" "+array[j]);
+                }
+                for(i= n-2 ; i>=0 ; i--){
+                    check= 1;
+                if(array[i] < array[i+1]){
+                    if(i==n-2){
+                        temp= array[i];
+                        array[i]= array[n-1];
+                        array[n-1]= temp;
+                        break;
+                    }
+                    else{
+                        //Tim so a[k] nho nhat ma >a[i] trong cac so ben phai a[i]
+                        k= i+1;
+                            for(j=i+1 ; j<n ; j++){
+                                if(array[i+1]>array[j] && array[j]>array[i]) k=j;
+
+                            }
+                            //Doi cho a[k] va a[i]
+                            temp= array[i];
+                            array[i]= array[k];
+                            array[k]= temp;
+                        //Sap xep lai tu a[i+1] toi a[n]
+                        for(j=i+1 ; j<n ; j++){
+                            for(int m= i+1 ; m<n ; m++){
+                                if(array[j]<array[m]){
+                                    temp= array[j];
+                                    array[j]= array[m];
+                                    array[m]= temp;
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
+                else {
+                    check=0;
+                //    break;
+                }
+                }
+                //if(i==0)check=0;
+            }
+        }catch(Exception e){}
+    }
+}
+
+
+
+Bài 12 :
+
+
+
+package bai12;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void horner(int a[], int n){
+        int T=0,i,x;
+        System.out.println("\n Nhap x= ");
+        x= nhap();
+        T= a[n];
+        for(i=n ; i>0 ; i--){
+            T= T*x + a[i-1];
+        }
+        System.out.println("Gia tri cua da thuc tinh theo cong thuc Horner la: "+T);
+    }
+    public static void main(String[] args) {
+        int i;
+        System.out.println("Nhap bac cua da thuc n= ");
+        int n= nhap();
+        int[] array= new int[n+1];
+        for(i=n ; i>=0 ; i--){
+            System.out.print("Nhap he so cua x^"+i+" = ");
+            array[i]= nhap();
+        }
+        horner(array,n);
+    }
+
+}
+
+
+
+Bài 13 :
+
+
+package bai13;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void inArray(int[] a, int begin , int end){
+        System.out.println();
+        int i;
+        for(i=begin ; i<end ; i++){
+            System.out.print(" "+a[i]);
+        }
+        System.out.println();
+    }
+    public static void themPhanTu(int[] a,int n,int pt){
+        a[0]= pt;
+        Arrays.sort(a);
+    }
+    public static void main(String[] args) {
+                System.out.println("Nhap n");
+        int n= nhap();
+        System.out.println("Nhap m");
+        int m= nhap();
+        int i;
+        int[] a= new int[n+m];
+        int[] b= new int[m];
+        //Nhap vao mang A va sap xep theo thu tu tang dan
+        System.out.println("nhap mang A: ");
+        for(i=0 ; i<n ; i++){
+            System.out.print("\n Nhap phan tu thu "+i+" = ");
+            a[i]= nhap();
+        }
+        Arrays.sort(a);
+        //Nhap vao mang B va sap xep theo thu tu tang dan
+        System.out.println("nhap mang B: ");
+        for(i=0 ; i<m ; i++){
+            System.out.print("\n Nhap phan tu thu "+i+" = ");
+            b[i]= nhap();
+        }
+        Arrays.sort(b);
+        //Gop mang b vao mang a
+        for(i=0 ; i<m ; i++){
+            themPhanTu(a, n+m+1, b[i]);
+        }
+        inArray(a, 0, n+m);
+    }}
+
+
+Bài 14 :
+
+
+package bai14;
+import java.util.Scanner;
+public class Main {
+
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static int countElement(int a[], int n, int i){
+        int count= 0;
+        for(int j=0 ; j<n ; j++){
+            if(a[j]== i)
+            count ++;
+        }
+        return (count);
+    }
+    public static void main(String[] args) {
+        int n,i;
+        System.out.println("Nhap n= ");
+        n= nhap();
+        int[] array= new int[n];
+        for(i=0 ; i<n ; i++){
+            System.out.println("Nhap phan tu thu " +(i+1)+" ");
+            array[i]= nhap();
+        }
+        System.out.print("Cac phan tu trong day xuat hien 1 lan: ");
+        for(i=0 ; i<n ; i++){
+            if(countElement(array, n, array[i])==1)
+                            System.out.print("  "+array[i]);
+    }
+   }
+}
+
+
+
+
+
+
+Bài 15 :
+
+
+package bai15;
+import java.util.Scanner;
+public class Main {
+
+    
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+
+    public static int countElement(int a[], int n, int i){
+        int count= 0;
+        for(int j=0 ; j<n ; j++){
+            if(a[j]== i)
+            count ++;
+        }
+        return (count);
+    }
+    public static void main(String[] args) {
+        int n,i;
+        System.out.println("Nhap n= ");
+        n= nhap();
+        int[] array= new int[n];
+        for(i=0 ; i<n ; i++){
+            System.out.println("Nhap phan tu thu " +(i+1)+" ");
+            array[i]= nhap();
+        }
+        System.out.print("Cac phan tu trong day xuat hien 2 lan: ");
+        for(i=0 ; i<n ; i++){
+            if(countElement(array, n, array[i])==2 && countElement(array, i, array[i])==0){
+                    System.out.print("  "+array[i]);
+            }
+
+        }
+    }
+
+}
+
+
+Bài 16 :
+
+
+package bai16;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static int countElement(int a[], int n, int i){
+        int count= 0;
+        for(int j=0 ; j<n ; j++){
+            if(a[j]== i)
+            count ++;
+        }
+        return (count);
+    }
+    public static void main(String[] args) {
+        int n,i;
+        System.out.println("Nhap n= ");
+        n= nhap();
+        int[] array= new int[n];
+        for(i=0 ; i<n ; i++){
+            System.out.println("Nhap phan tu thu " +(i+1)+" ");
+            array[i]= nhap();
+        }
+        for(i=0 ; i<n ; i++){
+            if(countElement(array, i, array[i])==0){
+                System.out.println("Phan tu "+array[i]+ " xuat hien "+countElement(array, n, array[i])+" lan");
+            }
+        }
+    }
+
+}
+
+
+Bài 17 :
+
+
+package bai17;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static float nhapFloat(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        float n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static int viTriMinFloat(float a[], int n){
+        float min= a[0];
+        int key= 0;
+        for(int j=0 ; j<n ; j++){
+            if(min>a[j]){
+                min= a[j];
+                key= j;
+            }
+        }
+        return (key);
+    }
+  public static float maxFloat(float a[], int n){
+        float max= a[0];
+        for(int j=0 ; j<n ; j++){
+            if(max<a[j]) max= a[j];
+        }
+        return (max);
+    }
+    public static void main(String[] args) {
+        int n,i;
+        System.out.println("Nhap n= ");
+        n= nhap();
+        float[] array= new float[n];
+        for(i=0 ; i<n ; i++){
+            System.out.println("Nhap phan tu thu " +(i+1)+" ");
+            array[i]= nhapFloat();
+        }
+        i =0;
+        System.out.println("Sap xep theo thu tu tang dan");
+        while(i<n){
+            System.out.println(" "+array[viTriMinFloat(array, n)]);
+                array[viTriMinFloat(array, n)]= maxFloat(array, n);
+        i++;
+        }
+    }
+}
+
+
+
+
+
+Bài 18 :
+
+
+package bai18;
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        System.out.println("Nhap vao 1 xau: ");
+        String str= input.nextLine();
+        StringTokenizer strToken= new StringTokenizer(str, " ");
+        System.out.println("So cac tu trong xau la: "+strToken.countTokens());
+    }
+
+}
+
+
+Bài 19 :
+
+
+package bai19;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static int tongChuSo(int n){
+        int T=0;
+        while(n>0){
+            T+= n%10;
+            n/= 10;
+        }
+        return (T);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap S= ");
+        int s= nhap();
+        int i,count=0;
+        System.out.println("Cac so nguyen to co tong cac chu so co tong bang "+s+" la: ");
+        for(i=10000 ; i<=99999 ; i++){
+            if(checkSNT(i)){
+                if(tongChuSo(i)== s) {
+                    System.out.println(" "+i);
+                    count++;
+                }
+                else continue;
+            }
+        }
+        System.out.println("Co "+count+" so thoa man");
+    }
+
+}
+
+
+Bài 20 :
+
+
+
+package bai20;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    //Ham kiem tra so nguyen to
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n= ");
+        int n= nhap();
+        int[] f= new int[n];
+        f[0]= 1; f[1]= 1;
+        int i=1,count=1;
+        System.out.print("Cac so Fibonanci nho hon "+n+" la so nguyen to: \n 1");
+        while(f[i]<n){
+            if(checkSNT(f[i])){
+                System.out.print(" "+f[i]);
+                count++;
+            }
+            i++;
+            f[i]= f[i-1] + f[i-2];
+        }
+        System.out.println("\n Co "+count+" so thoa man");
+    }
+
+}
+
+
+
+
+
+
+
+
+Bài 21 :
+
+
+
+package bai21;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static int tongChuSo(int n){
+        int T=0;
+        while(n>0){
+            T+= n%10;
+            n/= 10;
+        }
+        return (T);
+    }
+    //Ham kiem tra so nguyen to
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static void phanTich(int n){
+        int i=2;
+        while(n>1){
+            if(checkSNT(i)){
+                if(n%i==0){
+                    System.out.print(i+".");
+                    n/=i;
+                }
+                else i++;
+            }
+            else i++;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        System.out.print("n= 1" );
+        phanTich(n);
+        System.out.println("Tong cac chu so cua "+n+" la: "+tongChuSo(n));
+    }
+
+}
+
+
+Bài 22 :
+
+
+package bai22;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static void lietKeUoc(int n){
+        int count=0;
+        System.out.print("\nCac uoc cua "+n+" la:");
+        for(int i=1 ; i<=n ; i++){
+            if(n%i==0) {
+                System.out.print(" "+i);
+                count++;
+            }
+        }
+            System.out.println("\nCo "+count+" uoc");
+    }
+    public static void lietKeUocSNT(int n){
+        int count=0;
+        System.out.print("\nCac uoc cua "+n+" la:");
+        for(int i=1 ; i<=n ; i++){
+            if(n%i==0 && (checkSNT(i))) {
+                System.out.print(" "+i);
+                count++;
+            }
+        }
+            System.out.println("\nCo "+count+" uoc la so nguyen to");
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        lietKeUoc(n);
+        lietKeUocSNT(n);
+    }
+
+}
+
+
+Bài 23 :
+
+
+package bai23;
+import java.util.Scanner;
+public class Main {
+
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static void lietKeSNT(int n){
+        int i=1,count=0;
+        System.out.println("Cac so nguyen to nho hon "+n+" la: ");
+        while(i<n){
+            if(checkSNT(i)){
+                System.out.print(" "+i);
+                count++;
+            }
+            i++;
+        }
+        System.out.println("\n Co "+count+" so thoa man");
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n");
+        int n= nhap();
+        lietKeSNT(n);
+        int[] f= new int[n];
+        f[0]= 1; f[1]= 1;
+        int i=1;
+        System.out.print("Cac so Fibonanci nho hon "+n+" la : \n 1");
+        while(f[i]<n){
+                System.out.print(" "+f[i]);
+            i++;
+            f[i]= f[i-1] + f[i-2];
+        }
+        System.out.println("\n Co "+i+" so thoa man");
+    }
+
+}
+
+
+Bài 24 :
+
+
+package bai24;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static void inMT(int[][] A, int n, int m){
+        int i,j;
+        for(i=0 ; i<n ; i++){
+            System.out.print("\n");
+            for(j=0 ; j<m ; j++) System.out.print(" "+A[i][j]);
+        }
+    }
+    public static int findMaxMT(int[][] A, int n, int m){
+        int Max= A[0][0];
+        for(int i=0 ; i<n ; i++){
+            for(int j=0 ; j<m ; j++){
+                if(Max<A[i][j]) Max= A[i][j];
+            }
+        }
+        return (Max);
+    }
+    //Tim nhung phan tu la SNT
+    public static void phanTuSNT(int[][] A, int n, int m){
+        int count=0,i,j;
+        System.out.println("\nCac phan tu la SNT (nhung phan tu ko la SNT =0): ");
+        for(i=0 ; i<n ; i++){
+            System.out.print("\n");
+            for(j=0 ; j<m ; j++){
+                if(checkSNT(A[i][j])){
+                    count++;
+                    System.out.print(" "+A[i][j]);
+                }
+                else System.out.print(" "+0);
+            }
+        }
+        System.out.println("\n Co "+count+" phan tu la so nguyen to");
+    }
+    //Sap xep cac cot theo thu tang dan
+    public static void sortColum(int[][] A, int n, int m){
+        int i,j,temp;
+        for(j=0 ; j<m ; j++){
+            for(i=1 ; i<n ; i++){
+                if(A[i-1][j]>A[i][j]){
+                    temp= A[i-1][j];
+                    A[i-1][j]= A[i][j];
+                    A[i][j]= temp;
+                }
+            }
+        }
+        inMT(A, n, m);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap so hang n=");
+        int n= nhap();
+        System.out.print("Nhap so cot m=");
+        int m= nhap();
+        int [][] A= new int[n][m];
+        int i,j;
+        for(i=0 ; i<n ; i++){
+            for(j=0 ; j<m ; j++){
+                System.out.println("Nhap phan tu thu A["+(i+1)+"]["+(j+1)+"]= ");
+                A[i][j]= nhap();
+            }
+        }
+        System.out.println("Ma tran nhap vao: ");
+        inMT(A, n, m);
+        for(i=0 ; i<n ; i++){
+            for(j=0 ; j<m ; j++){
+                if(A[i][j]==findMaxMT(A, n, m))System.out.println("\nPhan tu o hang "+i+" cot "+j+" dat Max: A["+i+"]["+j+"]= "+A[i][j]);
+            }
+        }
+
+        phanTuSNT(A, n, m);
+        sortColum(A, n, m);
+    }
+
+}
+
+
+Bài 25 :
+
+
+package bai25;
+public class Main {
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static boolean testSoThuanNghich(int n){
+        StringBuilder xau= new StringBuilder();
+        String str= ""+n;
+        xau.append(str);
+        String check= ""+xau.reverse();
+        if(str.equals(check)) return true;
+        else return false;
+    }
+    public static boolean nguyenTo(int n){
+        while(n!=0){
+            if(!checkSNT(n%10)) return false;
+            n/= 10;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        int i,count= 0;
+        System.out.println("cac so tu 5-7 chu so thoa man dieu kien la: ");
+        for(i=22223 ; i<7777777 ; i+=2){
+            if(checkSNT(i) && nguyenTo(i) && testSoThuanNghich(i)){
+                System.out.println(" "+i); count++;
+            }
+        }
+        System.out.println("\n Co "+count+" so thoa man");
+    }
+
+}
+
+
+Bài 26 :
+
+
+package bai26;
+
+public class Main {
+    public static boolean checkSNT(int n){
+        if(n>1){
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0) return false;
+        }
+        return true;
+    }
+        else return false;
+    }
+    public static boolean testSoThuanNghich(int n){
+        StringBuilder xau= new StringBuilder();
+        String str= ""+n;
+        xau.append(str);
+        String check= ""+xau.reverse();
+        if(str.equals(check)) return true;
+        else return false;
+    }
+    public static boolean nguyenToTong(int n){
+        int T= 0;
+        while(n!=0){
+            T+= n%10;
+            if(!checkSNT(T)) return false;
+            n/= 10;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        int i,count= 0;
+        System.out.println("cac so tu 5-7 chu so thoa man dieu kien la: ");
+        for(i=22223 ; i<7777777 ; i+=2){
+            if(checkSNT(i) && nguyenToTong(i) && testSoThuanNghich(i)){
+                System.out.println(" "+i); count++;
+            }
+        }
+        System.out.println("\n Co "+count+" so thoa man");
+    }
+
+}
+
+
+
+Bài 27 :
+
+
+package bai27;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+  public static int viTriMaxInt(int a[], int n){
+        int max= a[0];
+        int key= 0;
+        for(int j=0 ; j<n ; j++){
+            if(max<a[j]){
+                max= a[j];
+                key= j;
+            }
+        }
+        return (key);
+    }
+    public static void inArray(int[] a, int begin , int end){
+        System.out.println();
+        int i;
+        for(i=begin ; i<end ; i++){
+            System.out.print(" "+a[i]);
+        }
+        System.out.println();
+    }
+    public static int viTriMax2(int[] a,int n){
+        int i,key=0,Max2=0;
+        for(i=0 ; i<n ; i++){
+            if(a[i]>Max2 && a[i]!= a[viTriMaxInt(a, n)]){
+                Max2= a[i];key= i;
+            }
+        }return (key);
+    }
+    public static void themPhanTu(int[] a,int n,int pt){
+        a[0]= pt;
+        Arrays.sort(a);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap n= ");
+        int n= nhap();
+        int[] a= new int[n+1];
+        int i;
+        for(i=0 ; i<n ; i++){
+            System.out.print("\n Nhap phan tu thu "+i+" = ");
+            a[i]= nhap();
+        }
+        for(i=0 ; i<n ; i++){
+            if(a[i]== a[viTriMax2(a, n)]) System.out.println(" Phan tu thu "+i+" lon thu 2 trong mang a["+i+"]= "+a[i]);
+        }
+        Arrays.sort(a);
+        inArray(a,1,n+1);
+        System.out.print("Nhap phan tu muon them pt= ");
+        int pt= nhap();
+        themPhanTu(a,n+1,pt);
+        inArray(a,0,n);
+    }
+
+}
+
+
+Bài 28 :
+
+
+package bai28;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void inMT(int[][] A, int n, int m){
+        int i,j;
+        for(i=0 ; i<n ; i++){
+            System.out.print("\n");
+            for(j=0 ; j<m ; j++) System.out.print(" "+A[i][j]);
+        }
+    }
+    public static int findMaxMT(int[][] A, int n, int m){
+        int Max= A[0][0];
+        for(int i=0 ; i<n ; i++){
+            for(int j=0 ; j<m ; j++){
+                if(Max<A[i][j]) Max= A[i][j];
+            }
+        }
+        return (Max);
+    }
+    public static void main(String[] args) {
+        System.out.print("Nhap so hang n=");
+        int n= nhap();
+        System.out.print("Nhap so cot m=");
+        int m= nhap();
+        int [][] A= new int[n][m];
+        int i,j;
+        for(i=0 ; i<n ; i++){
+            for(j=0 ; j<m ; j++){
+                System.out.println("Nhap phan tu thu A["+(i+1)+"]["+(j+1)+"]= ");
+                A[i][j]= nhap();
+            }
+        }
+        //In ra ma tran nhap vao
+        System.out.println("Ma tran nhap vao: ");
+        inMT(A, n, m);
+        //Tim phan tu max
+        for(i=0 ; i<n ; i++){
+            for(j=0 ; j<m ; j++){
+                if(A[i][j]==findMaxMT(A, n, m))System.out.println("\nPhan tu o hang "+i+" cot "+j+" dat Max: A["+i+"]["+j+"]= "+A[i][j]);
+    }
+   }
+}
+}
+
+
+
+Bài 29 :
+
+package bai29;
+import java.util.Scanner;
+public class Main {
+    public static int nhap(){
+        Scanner input= new Scanner(System.in);
+        boolean check= false;
+        int n=0;
+        while(!check){
+            System.out.print(" ");
+            try{
+                n= input.nextInt();
+                check= true;
+            }catch(Exception e){
+                System.out.println("Ban phai nhap so! hay nhap lai...");
+                input.nextLine();
+            }
+        }
+        return (n);
+    }
+    public static void horner(int a[], int n){
+        int T=0,i,x;
+        System.out.println("\n Nhap x= ");
+        x= nhap();
+        T= a[n];
+        for(i=n ; i>0 ; i--){
+            T= T*x + a[i-1];
+        }
+        System.out.println("Gia tri cua da thuc tinh theo cong thuc Horner la: "+T);
+    }
+    public static void inDaThuc(int a[], int n){
+        int i;
+        for(i=n ; i>0 ; i--){
+            System.out.print(" "+a[i]+".x^"+i+" + ");
+        }
+        System.out.print(" "+a[0]);
+    }
+    public static void daoHam(int a[],int dh[], int n){
+        int i;
+        for(i=n ; i>0 ; i--){
+            dh[i-1]= a[i]*i;
+        }
+        inDaThuc(dh,n-1);
+    }
+    public static void tongDaThuc(int a[], int n, int b[], int m){
+        int i;
+        System.out.println("\n Tong cua 2 da thuc A va B la: ");
+        if(n>m){
+            for(i=m ; i>=0 ; i--){
+                a[i]+=b[i];
+            }
+            inDaThuc(a,n);
+        }
+        else
+            for(i=n ; i>=0 ; i--){
+                b[i]+=a[i];
+            }
+            inDaThuc(b,m);
+        }    
+    public static void main(String[] args) {
+        int i;
+        System.out.println("Nhap bac cua da thuc n= ");
+        int n= nhap();
+        int[] array= new int[n+1];
+        for(i=n ; i>=0 ; i--){
+            System.out.print("Nhap he so cua x^"+i+" = ");
+            array[i]= nhap();
+        }
+        System.out.println("Da thuc A nhap vao la: ");
+        inDaThuc(array, n);
+        horner(array, n);
+        //Tinh dao ham bac 1
+        int[] dh= new int[n+1];
+        daoHam(array,dh,n);
+        //Tinh tong 2 da thuc
+        System.out.println("\n Nhap bac cua da thuc m= ");
+        int m= nhap();
+        int[] array2= new int[m+1];
+        for(i=m ; i>=0 ; i--){
+            System.out.print("Nhap he so cua x^"+i+" = ");
+            array2[i]= nhap();
+        }
+        System.out.println("Da thuc B nhap vao la: ");
+        inDaThuc(array2, m);
+        tongDaThuc(array, n, array2, m);
+    }
+
+}
+
+
+Bài 31 :
+
+import java.util.*;
+public class Bai31 {
+    
+    public static String chuyenInHoa(String str){
+        String s,strOutput;
+        s= str.substring(0, 1);
+        strOutput= str.replaceFirst(s,s.toUpperCase());
+        return (strOutput);
+    }
+    public static String chuanHoa(String strInput){
+        String strOutput="";
+        StringTokenizer strToken= new StringTokenizer(strInput," ,\t,\r");
+        strOutput+=""+chuyenInHoa(strToken.nextToken());
+        while(strToken.hasMoreTokens()){
+            strOutput+=" "+chuyenInHoa(strToken.nextToken());
+        }
+        return(strOutput);
+    }
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input= new Scanner(System.in);
+        System.out.println("Nhap vao 1 xau: ");
+        String strInput= input.nextLine();
+        System.out.println("Xau duoc chuan hoa la: "+chuanHoa(strInput));
+    }
+
+}
+
+
+Bài 32 :
+
+
+import java.util.*;
+public class Bai32 {
+
+    public static void timXauMax(String strInput){
+        StringTokenizer strToken= new StringTokenizer(strInput," ,\t,\r");
+        int Max,i=1,lengthStr;
+        Max= strToken.nextToken().length();
+        int viTriMax= i;
+        while(strToken.hasMoreTokens()){
+            lengthStr= strToken.nextToken().length();
+            i++;
+            if(Max < lengthStr){
+                Max= lengthStr;
+                viTriMax= i;
+            }
+        }
+        System.out.println("Do dai xau lon nhat la: "+Max+" o vi tri "+viTriMax);
+    }
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input= new Scanner(System.in);
+        System.out.println("Nhap vao 1 xau: ");
+        String strInput= input.nextLine();
+        timXauMax(strInput);
+    }
+
+}
+
+Bài 33 :
+
+
+import java.util.*;
+
+
+public class Bai33 {
+
+    
+    public static String doiViTri(String strInput){
+        String str= Bai31.chuanHoa(strInput);
+        StringTokenizer strToken= new StringTokenizer(str," ");
+        String ho    = strToken.nextToken();
+        String hoDem = strToken.nextToken();
+        String ten   = strToken.nextToken();
+        String strOutput= ten+" "+ho+" "+hoDem;
+        return(strOutput);
+    }
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input= new Scanner(System.in);
+        System.out.println("Nhap vao ho ten ( ho-ho dem -ten) : ");
+        String strInput= input.nextLine();
+        System.out.println("Ho va ten duoc sap xep lai (ten- ho - ho dem) : 
+
+"+doiViTri(strInput));
+    }
+
+}
