@@ -12,6 +12,41 @@ Tổng hợp các tài liệu lập trình tiếng Việt cho người mới b�
 
 > Các bạn chỉ cần vào từng thư mục tương ứng để download tài liệu mình đang tìm kiếm.
 
+## Các trang web lập trình viên nên biết(Việt Nam)
+
+### Cộng đồng C Việt
+Hiện tại website không có nhiều hoạt động mới. Tuy nhiên, chất lượng của các bại viết chia sẻ cũ thì vô đối.
+
+Một số topic hay nên đọc:
+> http://diendan.congdongcviet.com/threads/t42977::tim-hieu-ban-chat-cua-con-tro-tu-co-ban-den-nang-cao.cpp
+
+> http://diendan.congdongcviet.com/threads/t36221::ban-chat-cua-viec-cap-phat-bo-nho-dong-giai-phong-bo-nho.cpp
+
+> http://diendan.congdongcviet.com/threads/t51029::ban-chat-cua-toan-tu-da-nang-hoa-toan-tu-nang-cao-c-c.cpp
+
+### Dạy Nhau Học
+Mạng xã hội hỏi đáp lập trình đang hoạt động sôi nổi nhất(2019)
+
+Một số topic hay nên đọc:
+
+> https://daynhauhoc.com/t/tai-lieu-lap-trinh-c-for-newbie-chuong-1-nen-tang-de-bat-dau/1537
+
+> https://daynhauhoc.com/t/wiki-chia-se-tai-lieu-lap-trinh-c-c/463
+
+### Viblo
+Trang chia sẻ kiến thức lập trình thực tế của công ty Sun*
+
+> https://viblo.asia/editors-choice
+
+### Kipalog
+Trang chia sẻ kiến thức lập trình thực tế
+> https://kipalog.com/posts/Tong-hop-bai-viet-hay-tren-Kipalog
+
+### Tôi đi code dạo
+Một blog dạy lập trình qua thực tế của anh Phạm Huy Hoàng đang rất nổi, tác giả Code dạo ký sự
+
+> https://toidicodedao.com/2016/05/26/tong-hop-nhung-seriesbai-viet-hay-nhat-tren-blog/
+
 ## Đóng góp
 
 Nếu bạn có bất cứ tài liệu nào hay muốn chia sẻ và đóng góp, mình rất hoan nghênh tinh thần của các bạn. Bạn có thể làm như sau:
