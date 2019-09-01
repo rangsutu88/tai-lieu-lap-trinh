@@ -12,6 +12,16 @@ Tổng hợp các tài liệu lập trình tiếng Việt cho người mới b�
 
 > Các bạn chỉ cần vào từng thư mục tương ứng để download tài liệu mình đang tìm kiếm.
 
+## Tổng hợp tài liệu lập trình `link drive`
+
+> https://drive.google.com/drive/u/0/folders/0By2nM0K4O9B3U3Y2b0pZS3JwT1U
+
+> https://drive.google.com/drive/u/0/folders/0B4fU5__VXkIkU3doaF9td080ek0
+
+> https://drive.google.com/drive/u/0/folders/1QnsF8FdAXNpMYW1bL-OeEfNTbtMuDkpT
+
+> *Lưu ý: Các tài liệu này được sưu tầm, không phải của mình nên không đảm bảo nếu link chết.*
+
 ## Các trang web lập trình viên nên biết(Việt Nam)
 
 ### Cộng đồng C Việt
