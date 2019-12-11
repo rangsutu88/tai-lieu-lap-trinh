@@ -2,6 +2,8 @@
 
 Tổng hợp các tài liệu lập trình tiếng Việt cho người mới bắt đầu học lập trình. Bao gồm đa số tài liệu tiếng Việt và một số tài liệu tiếng anh.
 
+![](https://nguyenvanhieu.vn/wp-content/uploads/2018/11/hoc-lap-trinh-cho-nguoi-moi-bat-dau.jpg)
+
 ## Tài liệu hiện có
 
 - [x] Tài liệu C/C++
