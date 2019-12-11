@@ -69,6 +69,12 @@ Nếu bạn có bất cứ tài liệu nào hay muốn chia sẻ và đóng góp
 
 3. Tạo pull request
 
+## Vấn đề bản quyền
+
+Đây là các tài liệu được thu thập & tổng hợp từ nhiều nguồn trên internet không kèm bản quyền rõ ràng. Do đó, không thể tránh khỏi vấn đề dính phải tài liệu có bản quyền. Nếu bạn là tác giả hoặc phát hiện tài liệu nào đó có bản quyền, hãy tạo một Issue trên repo này để báo mình biết.
+
+Xin thứ lỗi và cảm ơn!
+
 ## Danh sách người đóng góp
 
 1. [Nguyễn Văn Hiếu](https://nguyenvanhieu.vn)
