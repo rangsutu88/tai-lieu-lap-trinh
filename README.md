@@ -11,7 +11,7 @@ Tổng hợp các tài liệu lập trình tiếng Việt cho người mới b�
 - [x] Tài liệu C#/ ASP.NET
 - [x] Tài liệu SQL
 - [x] Tài liệu Python
-- [x] 50+ Tài liệu lập trình của StackOverFlow (Engl
+- [x] 50+ Tài liệu lập trình của StackOverFlow `English`
 
 > Các bạn chỉ cần vào từng thư mục tương ứng để download tài liệu mình đang tìm kiếm.
 
