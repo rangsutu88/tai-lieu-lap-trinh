@@ -17,6 +17,7 @@ Tổng hợp các tài liệu lập trình tiếng Việt cho người mới b�
 
 ## Tài liệu hay tổng hợp bên ngoài
 > [144 Câu hỏi Javascript nâng cao có đáp án & lời giải chi tiết](https://github.com/lydiahallie/javascript-questions/blob/master/vi-VI/README-vi.md)
+
 > [Danh sách các khóa học lập trình miễn phí ở Việt Nam](https://github.com/EbookFoundation/free-programming-books/blob/master/free-courses-vi.md)
 
 ## Tổng hợp tài liệu lập trình `link drive`
